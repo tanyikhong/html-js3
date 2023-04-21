@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function checkform() 
+            {
+                var myname=document.getElementById("n1").value;
+                var myage=document.getElementById("a1").value;
+        
+                document.getElementById("info1").innerHTML = "dear "+myname+"";
+                document.getElementById("info2").innerHTML = "you are : "+myage+" years old.";
+                return false;
+        
+            }
+            </script>
+    </head>
+    <body>
+        <center>
+            <h1>school registration</h1>
+            <form method="post" onsubmit="return checkform()">
+                <table border="1" width="500">
+                    <tr><td>Items</td><td>details</td></tr>
+                    <tr><td>Name</td><td><input id="n1" type="text" maxlength="9999999999999999999999999999999999999999"></td></tr>
+                    <tr><td>Age</td><td><input id="a1" type="number" min="0" max="9999999999999999999999999999999999999999"></td></tr>
+                    <tr><td><input type="submit" value="Next"></td><td>Press to submit</td></tr>
+            </form>
+            <br><br>
+            <br><br>
+            
+            <table border="1" width="500">
+                <tr><td>the name given:</td><td><div id="info1"></div></td></tr>
+                <tr><td>age:</td><td><div id="info2"></div></td></tr>
+            </center>
+    </body>
+</html>
